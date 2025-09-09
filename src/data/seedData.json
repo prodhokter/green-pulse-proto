@@ -1,0 +1,116 @@
+{
+  "emissions": {
+    "totalDaily": 1247800,
+    "targetDaily": 1100000,
+    "weeklyTrend": [1210000, 1198000, 1234000, 1187000, 1225000, 1240000, 1247800],
+    "hourlyElectricity": [
+      { "time": "00:00", "value": 850 },
+      { "time": "01:00", "value": 820 },
+      { "time": "02:00", "value": 800 },
+      { "time": "03:00", "value": 790 },
+      { "time": "04:00", "value": 810 },
+      { "time": "05:00", "value": 890 },
+      { "time": "06:00", "value": 1020 },
+      { "time": "07:00", "value": 1180 },
+      { "time": "08:00", "value": 1350 },
+      { "time": "09:00", "value": 1420 },
+      { "time": "10:00", "value": 1480 },
+      { "time": "11:00", "value": 1520 },
+      { "time": "12:00", "value": 1580 },
+      { "time": "13:00", "value": 1620 },
+      { "time": "14:00", "value": 1590 },
+      { "time": "15:00", "value": 1550 },
+      { "time": "16:00", "value": 1480 },
+      { "time": "17:00", "value": 1420 },
+      { "time": "18:00", "value": 1380 },
+      { "time": "19:00", "value": 1320 },
+      { "time": "20:00", "value": 1180 },
+      { "time": "21:00", "value": 1080 },
+      { "time": "22:00", "value": 980 },
+      { "time": "23:00", "value": 920 }
+    ],
+    "powerSources": [
+      { "name": "Batubara", "value": 58.2, "color": "#64748b" },
+      { "name": "Gas Alam", "value": 22.1, "color": "#3b82f6" },
+      { "name": "Hidro Listrik", "value": 8.7, "color": "#06b6d4" },
+      { "name": "Tenaga Surya", "value": 6.3, "color": "#eab308" },
+      { "name": "Tenaga Angin", "value": 3.2, "color": "#22c55e" },
+      { "name": "Lainnya", "value": 1.5, "color": "#a855f7" }
+    ],
+    "regionalData": [
+      { "region": "Jakarta", "emissions": 145000, "population": 10770000 },
+      { "region": "Surabaya", "emissions": 98000, "population": 2800000 },
+      { "region": "Bandung", "emissions": 76000, "population": 2500000 },
+      { "region": "Medan", "emissions": 89000, "population": 2400000 },
+      { "region": "Semarang", "emissions": 54000, "population": 1600000 }
+    ]
+  },
+  "news": [
+    {
+      "id": 1,
+      "title": "Indonesia Luncurkan Rencana Ambisius Pengurangan Karbon 2030",
+      "excerpt": "Pemerintah mengumumkan strategi komprehensif untuk mengurangi emisi karbon nasional sebesar 35% sebelum tahun 2030.",
+      "category": "Update Kebijakan",
+      "date": "2024-01-15",
+      "image": "/news1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Proyek PLTS Baru Disetujui di Jawa Timur",
+      "excerpt": "Proyek instalasi pembangkit listrik tenaga surya 500MW mendapat lampu hijau, diperkirakan akan memasok listrik untuk 200.000 rumah.",
+      "category": "Update Proyek",
+      "date": "2024-01-12",
+      "image": "/news2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Green Innovation Hub Resmi Dibuka di Bandung",
+      "excerpt": "Fasilitas penelitian canggih untuk mempercepat pengembangan teknologi energi bersih telah diresmikan.",
+      "category": "Inovasi",
+      "date": "2024-01-10",
+      "image": "/news3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Investasi Energi Angin Mencapai Rekor Tertinggi",
+      "excerpt": "Investasi asing dalam proyek energi angin lepas pantai mencapai total $2.3 miliar pada kuartal ini.",
+      "category": "Investasi",
+      "date": "2024-01-08",
+      "image": "/news4.jpg"
+    }
+  ],
+  "programs": {
+    "government": {
+      "title": "Karunia Green Government",
+      "description": "Inisiatif pemerintah yang komprehensif untuk mentransisikan Indonesia menuju sistem energi berkelanjutan melalui reformasi kebijakan, pengembangan infrastruktur, dan keterlibatan masyarakat.",
+      "objectives": [
+        "Mengurangi emisi karbon nasional sebesar 35% pada tahun 2030",
+        "Meningkatkan kapasitas energi terbarukan menjadi 50% dari total bauran energi",
+        "Menciptakan 2 juta lapangan kerja hijau di seluruh nusantara",
+        "Membangun 100 komunitas energi berkelanjutan"
+      ],
+      "features": [
+        "Dashboard monitoring emisi real-time",
+        "Pelacakan kinerja regional",
+        "Pengawasan implementasi kebijakan",
+        "Program bantuan langsung tunai"
+      ]
+    },
+    "innovation": {
+      "title": "Karunia Green Innovation Hub",
+      "description": "Pusat penelitian dan pengembangan canggih yang mendorong inovasi teknologi energi bersih, program edukasi, dan kemitraan kolaboratif.",
+      "objectives": [
+        "Mengembangkan teknologi energi terbarukan terdepan",
+        "Melatih 50.000 profesional dalam keahlian hijau",
+        "Membangun kemitraan dengan 200+ organisasi",
+        "Meluncurkan 100 proyek energi bersih inovatif"
+      ],
+      "features": [
+        "Pusat sumber daya edukasi",
+        "Program inkubasi teknologi",
+        "Kursus sertifikasi profesional",
+        "Jaringan kolaborasi internasional"
+      ]
+    }
+  }
+}
