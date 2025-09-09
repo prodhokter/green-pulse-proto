@@ -30,12 +30,12 @@
       { "time": "23:00", "value": 920 }
     ],
     "powerSources": [
-      { "name": "Coal", "value": 58.2, "color": "#64748b" },
-      { "name": "Natural Gas", "value": 22.1, "color": "#3b82f6" },
-      { "name": "Hydroelectric", "value": 8.7, "color": "#06b6d4" },
-      { "name": "Solar", "value": 6.3, "color": "#eab308" },
-      { "name": "Wind", "value": 3.2, "color": "#22c55e" },
-      { "name": "Others", "value": 1.5, "color": "#a855f7" }
+      { "name": "Batubara", "value": 58.2, "color": "#64748b" },
+      { "name": "Gas Alam", "value": 22.1, "color": "#3b82f6" },
+      { "name": "Hidro Listrik", "value": 8.7, "color": "#06b6d4" },
+      { "name": "Tenaga Surya", "value": 6.3, "color": "#eab308" },
+      { "name": "Tenaga Angin", "value": 3.2, "color": "#22c55e" },
+      { "name": "Lainnya", "value": 1.5, "color": "#a855f7" }
     ],
     "regionalData": [
       { "region": "Jakarta", "emissions": 145000, "population": 10770000 },
@@ -48,33 +48,33 @@
   "news": [
     {
       "id": 1,
-      "title": "Indonesia Launches Ambitious 2030 Carbon Reduction Plan",
-      "excerpt": "Government announces comprehensive strategy to reduce national carbon emissions by 35% before 2030.",
-      "category": "Policy Update",
+      "title": "Indonesia Luncurkan Rencana Ambisius Pengurangan Karbon 2030",
+      "excerpt": "Pemerintah mengumumkan strategi komprehensif untuk mengurangi emisi karbon nasional sebesar 35% sebelum tahun 2030.",
+      "category": "Update Kebijakan",
       "date": "2024-01-15",
       "image": "/news1.jpg"
     },
     {
       "id": 2,
-      "title": "New Solar Farm Project Approved in East Java",
-      "excerpt": "Major 500MW solar installation project gets green light, expected to power 200,000 homes.",
-      "category": "Project Update",
+      "title": "Proyek PLTS Baru Disetujui di Jawa Timur",
+      "excerpt": "Proyek instalasi pembangkit listrik tenaga surya 500MW mendapat lampu hijau, diperkirakan akan memasok listrik untuk 200.000 rumah.",
+      "category": "Update Proyek",
       "date": "2024-01-12",
       "image": "/news2.jpg"
     },
     {
       "id": 3,
-      "title": "Green Innovation Hub Opens in Bandung",
-      "excerpt": "State-of-the-art research facility to accelerate clean energy technology development.",
-      "category": "Innovation",
+      "title": "Green Innovation Hub Resmi Dibuka di Bandung",
+      "excerpt": "Fasilitas penelitian canggih untuk mempercepat pengembangan teknologi energi bersih telah diresmikan.",
+      "category": "Inovasi",
       "date": "2024-01-10",
       "image": "/news3.jpg"
     },
     {
       "id": 4,
-      "title": "Wind Energy Investment Reaches Record High",
-      "excerpt": "Foreign investments in offshore wind projects total $2.3 billion this quarter.",
-      "category": "Investment",
+      "title": "Investasi Energi Angin Mencapai Rekor Tertinggi",
+      "excerpt": "Investasi asing dalam proyek energi angin lepas pantai mencapai total $2.3 miliar pada kuartal ini.",
+      "category": "Investasi",
       "date": "2024-01-08",
       "image": "/news4.jpg"
     }
@@ -82,34 +82,34 @@
   "programs": {
     "government": {
       "title": "Karunia Green Government",
-      "description": "Comprehensive government initiative to transition Indonesia toward sustainable energy systems through policy reforms, infrastructure development, and community engagement.",
+      "description": "Inisiatif pemerintah yang komprehensif untuk mentransisikan Indonesia menuju sistem energi berkelanjutan melalui reformasi kebijakan, pengembangan infrastruktur, dan keterlibatan masyarakat.",
       "objectives": [
-        "Reduce national carbon emissions by 35% by 2030",
-        "Increase renewable energy capacity to 50% of total energy mix",
-        "Create 2 million green jobs across the archipelago",
-        "Establish 100 sustainable energy communities"
+        "Mengurangi emisi karbon nasional sebesar 35% pada tahun 2030",
+        "Meningkatkan kapasitas energi terbarukan menjadi 50% dari total bauran energi",
+        "Menciptakan 2 juta lapangan kerja hijau di seluruh nusantara",
+        "Membangun 100 komunitas energi berkelanjutan"
       ],
       "features": [
-        "Real-time emissions monitoring dashboard",
-        "Regional performance tracking",
-        "Policy implementation oversight",
-        "Direct cash assistance programs"
+        "Dashboard monitoring emisi real-time",
+        "Pelacakan kinerja regional",
+        "Pengawasan implementasi kebijakan",
+        "Program bantuan langsung tunai"
       ]
     },
     "innovation": {
       "title": "Karunia Green Innovation Hub",
-      "description": "Advanced research and development center fostering innovation in clean energy technologies, educational programs, and collaborative partnerships.",
+      "description": "Pusat penelitian dan pengembangan canggih yang mendorong inovasi teknologi energi bersih, program edukasi, dan kemitraan kolaboratif.",
       "objectives": [
-        "Develop cutting-edge renewable energy technologies",
-        "Train 50,000 professionals in green skills",
-        "Establish partnerships with 200+ organizations",
-        "Launch 100 innovative clean energy projects"
+        "Mengembangkan teknologi energi terbarukan terdepan",
+        "Melatih 50.000 profesional dalam keahlian hijau",
+        "Membangun kemitraan dengan 200+ organisasi",
+        "Meluncurkan 100 proyek energi bersih inovatif"
       ],
       "features": [
-        "Educational resource center",
-        "Technology incubation programs",
-        "Professional certification courses",
-        "International collaboration network"
+        "Pusat sumber daya edukasi",
+        "Program inkubasi teknologi",
+        "Kursus sertifikasi profesional",
+        "Jaringan kolaborasi internasional"
       ]
     }
   }

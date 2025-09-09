@@ -16,9 +16,9 @@ const NotFound = () => {
       <div className="text-center max-w-md mx-auto px-4">
         <div className="mb-8">
           <h1 className="text-8xl font-bold text-primary mb-4">404</h1>
-          <h2 className="text-2xl font-semibold text-foreground mb-2">Page Not Found</h2>
+          <h2 className="text-2xl font-semibold text-foreground mb-2">Halaman Tidak Ditemukan</h2>
           <p className="text-muted-foreground">
-            The page you're looking for doesn't exist or has been moved.
+            Halaman yang Anda cari tidak ada atau telah dipindahkan.
           </p>
         </div>
         
@@ -26,12 +26,12 @@ const NotFound = () => {
           <Link to="/">
             <Button variant="hero" size="lg">
               <Home className="h-5 w-5" />
-              Back to Home
+              Kembali ke Beranda
             </Button>
           </Link>
           <Button variant="outline" size="lg" onClick={() => window.history.back()}>
             <ArrowLeft className="h-5 w-5" />
-            Go Back
+            Kembali
           </Button>
         </div>
       </div>

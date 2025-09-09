@@ -11,18 +11,18 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   const navigation = [
-    { name: 'Home', href: '/' },
+    { name: 'Beranda', href: '/' },
     {
-      name: 'Our Programs',
+      name: 'Program Kami',
       isDropdown: true,
       items: [
         { name: 'Karunia Green Government', href: '/programs/government' },
         { name: 'Karunia Green Innovation Hub', href: '/programs/innovation' }
       ]
     },
-    { name: 'News & Updates', href: '/news' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Berita & Update', href: '/news' },
+    { name: 'Tentang Kami', href: '/about' },
+    { name: 'Kontak', href: '/contact' }
   ];
 
   return (
@@ -35,8 +35,8 @@ const Header = () => {
               <Leaf className="h-6 w-6 text-primary-foreground" />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-foreground">Green Strategy</h1>
-              <p className="text-xs text-muted-foreground">Clean Energy Indonesia</p>
+              <h1 className="text-xl font-bold text-foreground">Strategi Hijau</h1>
+              <p className="text-xs text-muted-foreground">Energi Bersih Indonesia</p>
             </div>
           </Link>
 
@@ -90,7 +90,7 @@ const Header = () => {
             <Link to="/programs/government" className="hidden lg:block">
               <Button variant="hero" size="sm">
                 <BarChart3 className="h-4 w-4" />
-                View Dashboard
+                Lihat Dashboard
               </Button>
             </Link>
             
@@ -152,7 +152,7 @@ const Header = () => {
                 <Link to="/programs/government" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button variant="hero" size="sm" className="w-full">
                     <BarChart3 className="h-4 w-4" />
-                    View Dashboard
+                    Lihat Dashboard
                   </Button>
                 </Link>
               </div>

@@ -12,7 +12,7 @@ const Home = () => {
   const [currentEmissions, setCurrentEmissions] = useState(seedData.emissions.totalDaily);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  // Simulate real-time data updates
+  // Simulasi update data real-time
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -29,7 +29,7 @@ const Home = () => {
   }, []);
 
   const formatNumber = (num: number) => {
-    return new Intl.NumberFormat('en-US').format(num);
+    return new Intl.NumberFormat('id-ID').format(num);
   };
 
   return (
@@ -44,30 +44,30 @@ const Home = () => {
         <div className="relative container mx-auto px-4 py-24 lg:py-32">
           <div className="max-w-2xl">
             <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-              Green Strategy for Clean Energy
+              Strategi Hijau untuk Energi Bersih
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Building a 
+              Membangun 
               <span className="block gradient-hero bg-clip-text text-transparent">
-                Sustainable Future
+                Masa Depan Berkelanjutan
               </span> 
-              for Indonesia
+              untuk Indonesia
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Comprehensive government initiative driving Indonesia's transition to clean energy 
-              through innovative monitoring systems, strategic programs, and community engagement.
+              Inisiatif pemerintah yang komprehensif mendorong transisi Indonesia menuju energi bersih 
+              melalui sistem monitoring inovatif, program strategis, dan keterlibatan masyarakat.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/programs/government">
                 <Button variant="hero" size="xl">
                   <BarChart3 className="h-5 w-5" />
-                  Explore Our Programs
+                  Jelajahi Program Kami
                   <ArrowRight className="h-5 w-5" />
                 </Button>
               </Link>
               <Link to="/programs/government">
                 <Button variant="outline" size="xl">
-                  View Live Dashboard
+                  Lihat Dashboard Live
                 </Button>
               </Link>
             </div>
@@ -80,10 +80,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Our Strategic Programs
+              Program Strategis Kami
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Two comprehensive initiatives working together to achieve Indonesia's clean energy goals
+              Dua inisiatif komprehensif yang bekerja bersama untuk mencapai target energi bersih Indonesia
             </p>
           </div>
 
@@ -94,7 +94,7 @@ const Home = () => {
               <CardHeader>
                 <div className="flex items-center space-x-2 mb-2">
                   <BarChart3 className="h-8 w-8 text-primary" />
-                  <Badge variant="secondary">Government Initiative</Badge>
+                  <Badge variant="secondary">Inisiatif Pemerintah</Badge>
                 </div>
                 <CardTitle className="text-2xl">Karunia Green Government</CardTitle>
               </CardHeader>
@@ -112,7 +112,7 @@ const Home = () => {
                 </div>
                 <Link to="/programs/government">
                   <Button variant="default" className="w-full group-hover:shadow-lg">
-                    Learn More
+                    Pelajari Lebih Lanjut
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
@@ -143,7 +143,7 @@ const Home = () => {
                 </div>
                 <Link to="/programs/innovation">
                   <Button variant="secondary" className="w-full group-hover:shadow-lg">
-                    Learn More
+                    Pelajari Lebih Lanjut
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
@@ -158,13 +158,13 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-              Real-Time Monitoring
+              Monitoring Real-Time
             </Badge>
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Live Carbon Emissions Dashboard
+              Dashboard Emisi Karbon Live
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Track Indonesia's carbon footprint in real-time with our advanced monitoring system
+              Pantau jejak karbon Indonesia secara real-time dengan sistem monitoring canggih kami
             </p>
           </div>
 
@@ -174,17 +174,17 @@ const Home = () => {
               <Card className="text-center">
                 <CardHeader>
                   <CardTitle className="text-sm font-medium text-muted-foreground">
-                    Total Daily Emissions
+                    Total Emisi Harian
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className={`text-3xl font-bold text-foreground mb-2 ${isAnimating ? 'animate-pulse-glow' : ''}`}>
                     {formatNumber(currentEmissions)}
                   </div>
-                  <div className="text-sm text-muted-foreground">tons CO₂</div>
+                  <div className="text-sm text-muted-foreground">ton CO₂</div>
                   <div className="flex items-center justify-center space-x-1 mt-2">
                     <TrendingDown className="h-4 w-4 text-green-500" />
-                    <span className="text-sm text-green-500">-2.3% vs yesterday</span>
+                    <span className="text-sm text-green-500">-2,3% dari kemarin</span>
                   </div>
                 </CardContent>
               </Card>
@@ -193,14 +193,14 @@ const Home = () => {
               <Card className="text-center">
                 <CardHeader>
                   <CardTitle className="text-sm font-medium text-muted-foreground">
-                    Target vs Reality
+                    Target vs Realisasi
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold text-foreground mb-2">
                     {((currentEmissions / seedData.emissions.targetDaily) * 100).toFixed(1)}%
                   </div>
-                  <div className="text-sm text-muted-foreground">of target</div>
+                  <div className="text-sm text-muted-foreground">dari target</div>
                   <div className="mt-2">
                     <div className="w-full bg-muted rounded-full h-2">
                       <div 
@@ -216,17 +216,17 @@ const Home = () => {
               <Card className="text-center">
                 <CardHeader>
                   <CardTitle className="text-sm font-medium text-muted-foreground">
-                    Regions Monitored
+                    Wilayah Dipantau
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold text-foreground mb-2">
                     {seedData.emissions.regionalData.length}
                   </div>
-                  <div className="text-sm text-muted-foreground">active regions</div>
+                  <div className="text-sm text-muted-foreground">wilayah aktif</div>
                   <div className="flex items-center justify-center space-x-1 mt-2">
                     <Users className="h-4 w-4 text-primary" />
-                    <span className="text-sm text-primary">Real-time data</span>
+                    <span className="text-sm text-primary">Data real-time</span>
                   </div>
                 </CardContent>
               </Card>
@@ -236,7 +236,7 @@ const Home = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
-                  <span>Current Power Sources</span>
+                  <span>Sumber Energi Saat Ini</span>
                   <Badge variant="outline" className="animate-pulse-glow">Live</Badge>
                 </CardTitle>
               </CardHeader>
@@ -284,7 +284,7 @@ const Home = () => {
               <Link to="/programs/government">
                 <Button variant="hero" size="lg">
                   <BarChart3 className="h-5 w-5" />
-                  View Full Dashboard
+                  Lihat Dashboard Lengkap
                   <ExternalLink className="h-5 w-5" />
                 </Button>
               </Link>
@@ -299,15 +299,15 @@ const Home = () => {
           <div className="flex items-center justify-between mb-12">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Latest News & Updates
+                Berita & Update Terbaru
               </h2>
               <p className="text-xl text-muted-foreground">
-                Stay informed about our progress and initiatives
+                Tetap terinformasi tentang perkembangan dan inisiatif kami
               </p>
             </div>
             <Link to="/news">
               <Button variant="outline">
-                View All News
+                Lihat Semua Berita
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
@@ -330,7 +330,7 @@ const Home = () => {
                   </p>
                   <div className="flex items-center space-x-2 text-xs text-muted-foreground">
                     <Calendar className="h-3 w-3" />
-                    <span>{new Date(article.date).toLocaleDateString()}</span>
+                    <span>{new Date(article.date).toLocaleDateString('id-ID')}</span>
                   </div>
                 </CardContent>
               </Card>

@@ -14,7 +14,7 @@ const InnovationHub = () => {
           Karunia Green Innovation Hub
         </h1>
         <p className="text-xl text-muted-foreground max-w-3xl">
-          Advanced research and development center fostering innovation in clean energy technologies and education.
+          Pusat penelitian dan pengembangan canggih yang mendorong inovasi dalam teknologi energi bersih dan pendidikan.
         </p>
       </div>
 
@@ -23,24 +23,24 @@ const InnovationHub = () => {
           <CardHeader>
             <CardTitle className="flex items-center">
               <BookOpen className="h-5 w-5 mr-2" />
-              Education Center
+              Pusat Edukasi
             </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground mb-4">
-              Comprehensive learning resources for clean energy technologies and sustainable practices.
+              Sumber daya pembelajaran komprehensif untuk teknologi energi bersih dan praktik berkelanjutan.
             </p>
             <div className="space-y-2">
               <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                <span className="text-sm">Research Articles</span>
+                <span className="text-sm">Artikel Penelitian</span>
                 <Badge variant="outline">245</Badge>
               </div>
               <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                <span className="text-sm">Video Tutorials</span>
+                <span className="text-sm">Tutorial Video</span>
                 <Badge variant="outline">89</Badge>
               </div>
               <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                <span className="text-sm">Interactive Modules</span>
+                <span className="text-sm">Modul Interaktif</span>
                 <Badge variant="outline">34</Badge>
               </div>
             </div>
@@ -51,24 +51,24 @@ const InnovationHub = () => {
           <CardHeader>
             <CardTitle className="flex items-center">
               <Users className="h-5 w-5 mr-2" />
-              Partnerships
+              Kemitraan
             </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground mb-4">
-              Collaborative network with academic institutions, research centers, and industry leaders.
+              Jaringan kolaboratif dengan institusi akademik, pusat penelitian, dan pemimpin industri.
             </p>
             <div className="space-y-2">
               <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                <span className="text-sm">Universities</span>
+                <span className="text-sm">Universitas</span>
                 <Badge variant="outline">45</Badge>
               </div>
               <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                <span className="text-sm">Research Centers</span>
+                <span className="text-sm">Pusat Penelitian</span>
                 <Badge variant="outline">23</Badge>
               </div>
               <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                <span className="text-sm">Industry Partners</span>
+                <span className="text-sm">Mitra Industri</span>
                 <Badge variant="outline">67</Badge>
               </div>
             </div>
@@ -79,30 +79,30 @@ const InnovationHub = () => {
           <CardHeader>
             <CardTitle className="flex items-center">
               <Calendar className="h-5 w-5 mr-2" />
-              Upcoming Events
+              Acara Mendatang
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 {
-                  title: "Clean Energy Innovation Summit 2024",
-                  date: "March 15, 2024",
-                  type: "Conference"
+                  title: "Summit Inovasi Energi Bersih 2024",
+                  date: "15 Maret 2024",
+                  type: "Konferensi"
                 },
                 {
-                  title: "Solar Technology Workshop",
-                  date: "March 22, 2024", 
+                  title: "Workshop Teknologi Tenaga Surya",
+                  date: "22 Maret 2024", 
                   type: "Workshop"
                 },
                 {
-                  title: "Green Skills Certification Program",
-                  date: "April 5, 2024",
-                  type: "Training"
+                  title: "Program Sertifikasi Keahlian Hijau",
+                  date: "5 April 2024",
+                  type: "Pelatihan"
                 },
                 {
-                  title: "International Collaboration Forum",
-                  date: "April 18, 2024",
+                  title: "Forum Kolaborasi Internasional",
+                  date: "18 April 2024",
                   type: "Forum"
                 }
               ].map((event, index) => (

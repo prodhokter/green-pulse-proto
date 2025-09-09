@@ -14,13 +14,13 @@ const Footer = () => {
                 <Leaf className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-foreground">Green Strategy</h3>
-                <p className="text-sm text-muted-foreground">Clean Energy Indonesia</p>
+                <h3 className="text-lg font-bold text-foreground">Strategi Hijau</h3>
+                <p className="text-sm text-muted-foreground">Energi Bersih Indonesia</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Leading Indonesia's transition to sustainable clean energy through innovative programs, 
-              strategic partnerships, and comprehensive monitoring systems.
+              Memimpin transisi Indonesia menuju energi bersih berkelanjutan melalui program inovatif, 
+              kemitraan strategis, dan sistem monitoring komprehensif.
             </p>
             <div className="flex space-x-4">
               <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary transition-smooth cursor-pointer" />
@@ -32,13 +32,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-foreground">Quick Links</h4>
+            <h4 className="text-sm font-semibold text-foreground">Tautan Cepat</h4>
             <nav className="space-y-2">
               {[
-                { name: 'Home', href: '/' },
+                { name: 'Beranda', href: '/' },
                 { name: 'Dashboard', href: '/programs/government' },
                 { name: 'Innovation Hub', href: '/programs/innovation' },
-                { name: 'News & Updates', href: '/news' },
+                { name: 'Berita & Update', href: '/news' },
               ].map((item) => (
                 <Link
                   key={item.name}
@@ -53,13 +53,13 @@ const Footer = () => {
 
           {/* Programs */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-foreground">Our Programs</h4>
+            <h4 className="text-sm font-semibold text-foreground">Program Kami</h4>
             <nav className="space-y-2">
               {[
                 'Karunia Green Government',
                 'Green Innovation Hub',
-                'Green Skilling & Upskilling',
-                'Direct Cash Assistance',
+                'Pelatihan & Peningkatan Keahlian Hijau',
+                'Bantuan Langsung Tunai',
               ].map((item) => (
                 <div key={item} className="text-sm text-muted-foreground">
                   {item}
@@ -70,7 +70,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-foreground">Contact Us</h4>
+            <h4 className="text-sm font-semibold text-foreground">Hubungi Kami</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-primary" />
@@ -82,7 +82,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>info@greenstrategy.gov.id</span>
+                <span>info@strategihijau.gov.id</span>
               </div>
             </div>
           </div>
@@ -92,14 +92,14 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-border">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © 2024 Green Strategy for Clean Energy. All rights reserved.
+              © 2024 Strategi Hijau untuk Energi Bersih. Seluruh hak cipta dilindungi.
             </p>
             <div className="flex space-x-4">
               <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
-                Privacy Policy
+                Kebijakan Privasi
               </Link>
               <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
-                Terms of Service
+                Syarat Layanan
               </Link>
             </div>
           </div>

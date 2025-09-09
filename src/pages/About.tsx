@@ -8,11 +8,11 @@ const About = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-foreground mb-4">
-          About Green Strategy for Clean Energy
+          Tentang Strategi Hijau untuk Energi Bersih
         </h1>
         <p className="text-xl text-muted-foreground max-w-3xl">
-          Indonesia's comprehensive government initiative driving the transition to sustainable energy 
-          through strategic programs, innovative technologies, and community engagement.
+          Inisiatif pemerintah Indonesia yang komprehensif mendorong transisi menuju energi berkelanjutan 
+          melalui program strategis, teknologi inovatif, dan keterlibatan masyarakat.
         </p>
       </div>
 
@@ -22,15 +22,15 @@ const About = () => {
           <CardHeader>
             <CardTitle className="flex items-center">
               <Target className="h-6 w-6 mr-2 text-primary" />
-              Our Mission
+              Misi Kami
             </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              To accelerate Indonesia's transition to sustainable clean energy by implementing 
-              comprehensive monitoring systems, strategic government programs, and fostering 
-              innovation in renewable energy technologies while ensuring economic growth and 
-              environmental sustainability.
+              Mempercepat transisi Indonesia menuju energi bersih berkelanjutan dengan mengimplementasikan 
+              sistem monitoring komprehensif, program pemerintah strategis, dan mendorong inovasi 
+              dalam teknologi energi terbarukan sambil memastikan pertumbuhan ekonomi dan 
+              keberlanjutan lingkungan.
             </p>
           </CardContent>
         </Card>
@@ -39,14 +39,14 @@ const About = () => {
           <CardHeader>
             <CardTitle className="flex items-center">
               <Award className="h-6 w-6 mr-2 text-secondary" />
-              Our Vision
+              Visi Kami
             </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              To position Indonesia as a global leader in clean energy adoption and innovation, 
-              achieving carbon neutrality by 2060 while creating millions of green jobs and 
-              establishing sustainable energy communities across the archipelago.
+              Memposisikan Indonesia sebagai pemimpin global dalam adopsi dan inovasi energi bersih, 
+              mencapai netralitas karbon pada tahun 2060 sambil menciptakan jutaan lapangan kerja hijau dan 
+              membangun komunitas energi berkelanjutan di seluruh nusantara.
             </p>
           </CardContent>
         </Card>
@@ -54,32 +54,32 @@ const About = () => {
 
       {/* Key Objectives */}
       <div className="mb-12">
-        <h2 className="text-3xl font-bold text-foreground mb-6">Key Objectives</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-6">Tujuan Utama</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {[
             {
-              title: "Carbon Emission Reduction",
-              description: "Reduce national carbon emissions by 35% by 2030 through comprehensive monitoring and strategic interventions.",
+              title: "Pengurangan Emisi Karbon",
+              description: "Mengurangi emisi karbon nasional sebesar 35% pada tahun 2030 melalui monitoring komprehensif dan intervensi strategis.",
               icon: Target,
-              badge: "Environmental"
+              badge: "Lingkungan"
             },
             {
-              title: "Renewable Energy Expansion", 
-              description: "Increase renewable energy capacity to 50% of total energy mix through solar, wind, and hydroelectric projects.",
+              title: "Ekspansi Energi Terbarukan", 
+              description: "Meningkatkan kapasitas energi terbarukan menjadi 50% dari total bauran energi melalui proyek tenaga surya, angin, dan hidroelektrik.",
               icon: Award,
-              badge: "Energy"
+              badge: "Energi"
             },
             {
-              title: "Green Job Creation",
-              description: "Create 2 million green jobs across various sectors including renewable energy, research, and sustainable technologies.",
+              title: "Penciptaan Lapangan Kerja Hijau",
+              description: "Menciptakan 2 juta lapangan kerja hijau di berbagai sektor termasuk energi terbarukan, penelitian, dan teknologi berkelanjutan.",
               icon: Users,
-              badge: "Economic"
+              badge: "Ekonomi"
             },
             {
-              title: "Innovation & Education",
-              description: "Establish 100+ innovation hubs and train 50,000 professionals in clean energy technologies and sustainable practices.",
+              title: "Inovasi & Pendidikan",
+              description: "Membangun 100+ innovation hub dan melatih 50.000 profesional dalam teknologi energi bersih dan praktik berkelanjutan.",
               icon: BookOpen,
-              badge: "Innovation"
+              badge: "Inovasi"
             }
           ].map((objective, index) => (
             <Card key={index} className="transition-smooth hover:shadow-card">
@@ -103,26 +103,26 @@ const About = () => {
       {/* Legal Framework */}
       <Card>
         <CardHeader>
-          <CardTitle>Legal Framework & Authority</CardTitle>
+          <CardTitle>Kerangka Hukum & Kewenangan</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold mb-3 text-foreground">Regulatory Foundation</h4>
+              <h4 className="font-semibold mb-3 text-foreground">Landasan Regulasi</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Presidential Regulation No. 22/2017 on National Energy General Plan</li>
-                <li>• Law No. 30/2007 on Energy Management</li>
-                <li>• Government Regulation No. 79/2014 on National Energy Policy</li>
-                <li>• Presidential Regulation No. 112/2022 on Renewable Energy Acceleration</li>
+                <li>• Peraturan Presiden No. 22/2017 tentang Rencana Umum Energi Nasional</li>
+                <li>• Undang-Undang No. 30/2007 tentang Pengelolaan Energi</li>
+                <li>• Peraturan Pemerintah No. 79/2014 tentang Kebijakan Energi Nasional</li>
+                <li>• Peraturan Presiden No. 112/2022 tentang Percepatan Energi Terbarukan</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3 text-foreground">Implementation Partners</h4>
+              <h4 className="font-semibold mb-3 text-foreground">Mitra Implementasi</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Ministry of Energy and Mineral Resources</li>
-                <li>• Ministry of Environment and Forestry</li>
-                <li>• National Research and Innovation Agency (BRIN)</li>
-                <li>• Regional Energy Development Agencies</li>
+                <li>• Kementerian Energi dan Sumber Daya Mineral</li>
+                <li>• Kementerian Lingkungan Hidup dan Kehutanan</li>
+                <li>• Badan Riset dan Inovasi Nasional (BRIN)</li>
+                <li>• Badan Pengembangan Energi Daerah</li>
               </ul>
             </div>
           </div>

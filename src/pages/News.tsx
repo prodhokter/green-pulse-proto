@@ -6,11 +6,11 @@ import { Calendar, Filter } from 'lucide-react';
 import seedData from '@/data/seedData.json';
 
 const News = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('Semua');
   
-  const categories = ['All', 'Policy Update', 'Project Update', 'Innovation', 'Investment'];
+  const categories = ['Semua', 'Update Kebijakan', 'Update Proyek', 'Inovasi', 'Investasi'];
   
-  const filteredNews = selectedCategory === 'All' 
+  const filteredNews = selectedCategory === 'Semua' 
     ? seedData.news 
     : seedData.news.filter(article => article.category === selectedCategory);
 
@@ -18,10 +18,10 @@ const News = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-foreground mb-4">
-          News & Updates
+          Berita & Update
         </h1>
         <p className="text-xl text-muted-foreground">
-          Stay informed about Indonesia's clean energy progress and initiatives
+          Tetap terinformasi tentang kemajuan dan inisiatif energi bersih Indonesia
         </p>
       </div>
 
@@ -29,7 +29,7 @@ const News = () => {
       <div className="mb-8">
         <div className="flex items-center space-x-2 mb-4">
           <Filter className="h-5 w-5 text-muted-foreground" />
-          <span className="text-sm font-medium text-muted-foreground">Filter by category:</span>
+          <span className="text-sm font-medium text-muted-foreground">Filter berdasarkan kategori:</span>
         </div>
         <div className="flex flex-wrap gap-2">
           {categories.map((category) => (
@@ -56,7 +56,7 @@ const News = () => {
                 </Badge>
                 <div className="flex items-center space-x-1 text-xs text-muted-foreground">
                   <Calendar className="h-3 w-3" />
-                  <span>{new Date(article.date).toLocaleDateString()}</span>
+                  <span>{new Date(article.date).toLocaleDateString('id-ID')}</span>
                 </div>
               </div>
               <CardTitle className="text-lg line-clamp-2 group-hover:text-primary transition-smooth">
@@ -74,7 +74,7 @@ const News = () => {
 
       {filteredNews.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-muted-foreground">No articles found for the selected category.</p>
+          <p className="text-muted-foreground">Tidak ada artikel yang ditemukan untuk kategori yang dipilih.</p>
         </div>
       )}
     </div>

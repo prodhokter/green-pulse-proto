@@ -28,11 +28,11 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Simulasi pengiriman formulir
     setTimeout(() => {
       toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
+        title: "Pesan Terkirim!",
+        description: "Terima kasih telah menghubungi kami. Kami akan segera merespons.",
       });
       
       // Reset form
@@ -49,7 +49,7 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Office Address",
+      title: "Alamat Kantor",
       details: [
         "Jl. Medan Merdeka Selatan No. 13",
         "Jakarta Pusat 10110",
@@ -58,7 +58,7 @@ const Contact = () => {
     },
     {
       icon: Phone,
-      title: "Phone Numbers",
+      title: "Nomor Telepon",
       details: [
         "+62 21 1234 5678",
         "+62 21 8765 4321",
@@ -67,20 +67,20 @@ const Contact = () => {
     },
     {
       icon: Mail,
-      title: "Email Addresses",
+      title: "Alamat Email",
       details: [
-        "info@greenstrategy.gov.id",
-        "support@greenstrategy.gov.id",
-        "partnership@greenstrategy.gov.id"
+        "info@strategihijau.gov.id",
+        "dukungan@strategihijau.gov.id",
+        "kemitraan@strategihijau.gov.id"
       ]
     },
     {
       icon: Clock,
-      title: "Office Hours",
+      title: "Jam Operasional",
       details: [
-        "Monday - Friday: 08:00 - 17:00 WIB",
-        "Saturday: 08:00 - 12:00 WIB",
-        "Sunday: Closed"
+        "Senin - Jumat: 08:00 - 17:00 WIB",
+        "Sabtu: 08:00 - 12:00 WIB",
+        "Minggu: Tutup"
       ]
     }
   ];
@@ -89,11 +89,11 @@ const Contact = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-foreground mb-4">
-          Contact Us
+          Hubungi Kami
         </h1>
         <p className="text-xl text-muted-foreground max-w-3xl">
-          Get in touch with our team for inquiries about clean energy programs, 
-          partnerships, or technical support.
+          Hubungi tim kami untuk pertanyaan tentang program energi bersih, 
+          kemitraan, atau dukungan teknis.
         </p>
       </div>
 
@@ -101,7 +101,7 @@ const Contact = () => {
         {/* Contact Information */}
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-foreground mb-6">
-            Get in Touch
+            Mari Terhubung
           </h2>
           
           <div className="grid gap-6">
@@ -131,13 +131,13 @@ const Contact = () => {
             <CardHeader>
               <CardTitle className="flex items-center">
                 <MapPin className="h-5 w-5 mr-2" />
-                Location Map
+                Peta Lokasi
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="bg-muted/30 h-48 rounded-lg flex items-center justify-center">
                 <p className="text-muted-foreground text-sm">
-                  Interactive map will be embedded here
+                  Peta interaktif akan disematkan di sini
                 </p>
               </div>
             </CardContent>
@@ -150,57 +150,57 @@ const Contact = () => {
             <CardHeader>
               <CardTitle className="flex items-center">
                 <Send className="h-5 w-5 mr-2" />
-                Send us a Message
+                Kirim Pesan
               </CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Full Name *</Label>
+                    <Label htmlFor="name">Nama Lengkap *</Label>
                     <Input
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="Enter your full name"
+                      placeholder="Masukkan nama lengkap"
                       required
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email Address *</Label>
+                    <Label htmlFor="email">Alamat Email *</Label>
                     <Input
                       id="email"
                       name="email"
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="Enter your email"
+                      placeholder="Masukkan email Anda"
                       required
                     />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="subject">Subject *</Label>
+                  <Label htmlFor="subject">Subjek *</Label>
                   <Input
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    placeholder="What is this regarding?"
+                    placeholder="Perihal apa ini?"
                     required
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message *</Label>
+                  <Label htmlFor="message">Pesan *</Label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Please provide details about your inquiry..."
+                    placeholder="Mohon berikan detail tentang pertanyaan Anda..."
                     rows={6}
                     required
                   />
@@ -214,17 +214,17 @@ const Contact = () => {
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
-                    "Sending..."
+                    "Mengirim..."
                   ) : (
                     <>
                       <Send className="h-5 w-5" />
-                      Send Message
+                      Kirim Pesan
                     </>
                   )}
                 </Button>
                 
                 <p className="text-xs text-muted-foreground text-center">
-                  * Required fields. We typically respond within 24 hours during business days.
+                  * Kolom wajib diisi. Kami biasanya merespons dalam 24 jam pada hari kerja.
                 </p>
               </form>
             </CardContent>
