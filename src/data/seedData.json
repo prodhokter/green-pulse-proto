@@ -1,0 +1,116 @@
+{
+  "emissions": {
+    "totalDaily": 1247800,
+    "targetDaily": 1100000,
+    "weeklyTrend": [1210000, 1198000, 1234000, 1187000, 1225000, 1240000, 1247800],
+    "hourlyElectricity": [
+      { "time": "00:00", "value": 850 },
+      { "time": "01:00", "value": 820 },
+      { "time": "02:00", "value": 800 },
+      { "time": "03:00", "value": 790 },
+      { "time": "04:00", "value": 810 },
+      { "time": "05:00", "value": 890 },
+      { "time": "06:00", "value": 1020 },
+      { "time": "07:00", "value": 1180 },
+      { "time": "08:00", "value": 1350 },
+      { "time": "09:00", "value": 1420 },
+      { "time": "10:00", "value": 1480 },
+      { "time": "11:00", "value": 1520 },
+      { "time": "12:00", "value": 1580 },
+      { "time": "13:00", "value": 1620 },
+      { "time": "14:00", "value": 1590 },
+      { "time": "15:00", "value": 1550 },
+      { "time": "16:00", "value": 1480 },
+      { "time": "17:00", "value": 1420 },
+      { "time": "18:00", "value": 1380 },
+      { "time": "19:00", "value": 1320 },
+      { "time": "20:00", "value": 1180 },
+      { "time": "21:00", "value": 1080 },
+      { "time": "22:00", "value": 980 },
+      { "time": "23:00", "value": 920 }
+    ],
+    "powerSources": [
+      { "name": "Coal", "value": 58.2, "color": "#64748b" },
+      { "name": "Natural Gas", "value": 22.1, "color": "#3b82f6" },
+      { "name": "Hydroelectric", "value": 8.7, "color": "#06b6d4" },
+      { "name": "Solar", "value": 6.3, "color": "#eab308" },
+      { "name": "Wind", "value": 3.2, "color": "#22c55e" },
+      { "name": "Others", "value": 1.5, "color": "#a855f7" }
+    ],
+    "regionalData": [
+      { "region": "Jakarta", "emissions": 145000, "population": 10770000 },
+      { "region": "Surabaya", "emissions": 98000, "population": 2800000 },
+      { "region": "Bandung", "emissions": 76000, "population": 2500000 },
+      { "region": "Medan", "emissions": 89000, "population": 2400000 },
+      { "region": "Semarang", "emissions": 54000, "population": 1600000 }
+    ]
+  },
+  "news": [
+    {
+      "id": 1,
+      "title": "Indonesia Launches Ambitious 2030 Carbon Reduction Plan",
+      "excerpt": "Government announces comprehensive strategy to reduce national carbon emissions by 35% before 2030.",
+      "category": "Policy Update",
+      "date": "2024-01-15",
+      "image": "/news1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "New Solar Farm Project Approved in East Java",
+      "excerpt": "Major 500MW solar installation project gets green light, expected to power 200,000 homes.",
+      "category": "Project Update",
+      "date": "2024-01-12",
+      "image": "/news2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Green Innovation Hub Opens in Bandung",
+      "excerpt": "State-of-the-art research facility to accelerate clean energy technology development.",
+      "category": "Innovation",
+      "date": "2024-01-10",
+      "image": "/news3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Wind Energy Investment Reaches Record High",
+      "excerpt": "Foreign investments in offshore wind projects total $2.3 billion this quarter.",
+      "category": "Investment",
+      "date": "2024-01-08",
+      "image": "/news4.jpg"
+    }
+  ],
+  "programs": {
+    "government": {
+      "title": "Karunia Green Government",
+      "description": "Comprehensive government initiative to transition Indonesia toward sustainable energy systems through policy reforms, infrastructure development, and community engagement.",
+      "objectives": [
+        "Reduce national carbon emissions by 35% by 2030",
+        "Increase renewable energy capacity to 50% of total energy mix",
+        "Create 2 million green jobs across the archipelago",
+        "Establish 100 sustainable energy communities"
+      ],
+      "features": [
+        "Real-time emissions monitoring dashboard",
+        "Regional performance tracking",
+        "Policy implementation oversight",
+        "Direct cash assistance programs"
+      ]
+    },
+    "innovation": {
+      "title": "Karunia Green Innovation Hub",
+      "description": "Advanced research and development center fostering innovation in clean energy technologies, educational programs, and collaborative partnerships.",
+      "objectives": [
+        "Develop cutting-edge renewable energy technologies",
+        "Train 50,000 professionals in green skills",
+        "Establish partnerships with 200+ organizations",
+        "Launch 100 innovative clean energy projects"
+      ],
+      "features": [
+        "Educational resource center",
+        "Technology incubation programs",
+        "Professional certification courses",
+        "International collaboration network"
+      ]
+    }
+  }
+}
