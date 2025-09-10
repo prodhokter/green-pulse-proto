@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Calendar, Filter } from 'lucide-react';
+import { Calendar, Filter, ArrowRight, User } from 'lucide-react';
 import seedData from '@/data/seedData.json';
 
 const News = () => {
   const [selectedCategory, setSelectedCategory] = useState('Semua');
   
-  const categories = ['Semua', 'Update Kebijakan', 'Update Proyek', 'Inovasi', 'Investasi'];
+  const categories = ['Semua', 'PerDa Transisi Energi', 'Update Proyek', 'Inovasi', 'Program Pelatihan'];
   
   const filteredNews = selectedCategory === 'Semua' 
     ? seedData.news 
@@ -21,7 +22,7 @@ const News = () => {
           Berita & Update
         </h1>
         <p className="text-xl text-muted-foreground">
-          Tetap terinformasi tentang kemajuan dan inisiatif energi bersih Indonesia
+          Tetap terinformasi tentang kemajuan dan inisiatif energi bersih Kota Karunia
         </p>
       </div>
 
@@ -48,9 +49,9 @@ const News = () => {
       {/* News Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredNews.map((article) => (
-          <Card key={article.id} className="transition-smooth hover:shadow-card group cursor-pointer">
-            <CardHeader>
-              <div className="flex items-center justify-between mb-2">
+          <Card key={article.id} className="transition-smooth hover:shadow-card group cursor-pointer h-full flex flex-col">
+            <CardHeader className="flex-grow">
+              <div className="flex items-center justify-between mb-3">
                 <Badge variant="outline">
                   {article.category}
                 </Badge>
@@ -59,14 +60,26 @@ const News = () => {
                   <span>{new Date(article.date).toLocaleDateString('id-ID')}</span>
                 </div>
               </div>
-              <CardTitle className="text-lg line-clamp-2 group-hover:text-primary transition-smooth">
+              <CardTitle className="text-lg line-clamp-2 group-hover:text-primary transition-smooth mb-3">
                 {article.title}
               </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground line-clamp-3">
+              <p className="text-sm text-muted-foreground line-clamp-3 mb-4">
                 {article.excerpt}
               </p>
+              {article.author && (
+                <div className="flex items-center space-x-1 text-xs text-muted-foreground mb-4">
+                  <User className="h-3 w-3" />
+                  <span>{article.author}</span>
+                </div>
+              )}
+            </CardHeader>
+            <CardContent className="pt-0">
+              <Link to={`/news/${article.id}`}>
+                <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                  Baca Selengkapnya
+                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         ))}
