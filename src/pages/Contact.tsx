@@ -178,40 +178,40 @@ const Contact = () => {
                       <rect width="2" height="2" x="9" y="9" fill="#ddd"/>
                     </pattern>
                   </defs>
-                  
+
                   {/* Mountains in background */}
-                  <path d="M0,200 L100,120 L200,160 L300,100 L400,140 L500,80 L600,120 L700,100 L800,140 L800,400 L0,400 Z" 
+                  <path d="M0,200 L100,120 L200,160 L300,100 L400,140 L500,80 L600,120 L700,100 L800,140 L800,400 L0,400 Z"
                         fill="#81c784" opacity="0.3"/>
-                  
+
                   {/* Hills */}
-                  <path d="M0,280 Q200,240 400,260 T800,280 L800,400 L0,400 Z" 
+                  <path d="M0,280 Q200,240 400,260 T800,280 L800,400 L0,400 Z"
                         fill="#a5d6a7" opacity="0.4"/>
-                  
+
                   {/* City area */}
                   <rect x="200" y="180" width="400" height="220" fill="url(#cityPattern)" opacity="0.6"/>
-                  
+
                   {/* Main roads */}
                   <line x1="50" y1="300" x2="750" y2="300" stroke="#666" strokeWidth="4"/>
                   <line x1="400" y1="100" x2="400" y2="380" stroke="#666" strokeWidth="4"/>
                   <line x1="250" y1="180" x2="550" y2="350" stroke="#888" strokeWidth="3"/>
-                  
+
                   {/* Jl. Neraca (our office street) */}
                   <line x1="350" y1="280" x2="450" y2="280" stroke="#4fc3f7" strokeWidth="6" strokeDasharray="2,2"/>
-                  
+
                   {/* Buildings */}
                   <rect x="320" y="240" width="15" height="30" fill="#64b5f6"/>
                   <rect x="340" y="235" width="12" height="35" fill="#81c784"/>
                   <rect x="355" y="245" width="18" height="25" fill="#ffb74d"/>
                   <rect x="380" y="230" width="20" height="40" fill="#e57373"/>
                   <rect x="405" y="240" width="15" height="30" fill="#ba68c8"/>
-                  
+
                   {/* Parks/Green spaces */}
                   <circle cx="300" cy="200" r="25" fill="#66bb6a" opacity="0.7"/>
                   <circle cx="500" cy="320" r="30" fill="#66bb6a" opacity="0.7"/>
-                  
+
                   {/* River */}
                   <path d="M0,350 Q200,330 400,340 T800,350" stroke="#42a5f5" strokeWidth="8" fill="none" opacity="0.7"/>
-                  
+
                   {/* Office marker - Red pin */}
                   <g transform="translate(400,280)">
                     <circle cx="0" cy="0" r="12" fill="#f44336"/>
@@ -219,14 +219,14 @@ const Contact = () => {
                     <path d="M0,-15 Q-8,-25 0,-35 Q8,-25 0,-15" fill="#f44336"/>
                     <circle cx="0" cy="-25" r="4" fill="#ffffff"/>
                   </g>
-                  
+
                   {/* Compass */}
                   <g transform="translate(720,60)">
                     <circle cx="0" cy="0" r="25" fill="white" stroke="#333" strokeWidth="2"/>
                     <path d="M0,-20 L5,0 L0,5 L-5,0 Z" fill="#f44336"/>
                     <text x="0" y="-30" textAnchor="middle" fontSize="12" fill="#333" fontWeight="bold">U</text>
                   </g>
-                  
+
                   {/* Scale */}
                   <g transform="translate(50,350)">
                     <line x1="0" y1="0" x2="50" y2="0" stroke="#333" strokeWidth="2"/>
@@ -234,15 +234,15 @@ const Contact = () => {
                     <line x1="50" y1="-3" x2="50" y2="3" stroke="#333" strokeWidth="2"/>
                     <text x="25" y="15" textAnchor="middle" fontSize="10" fill="#333">1 km</text>
                   </g>
-                  
+
                   {/* City labels */}
                   <text x="400" y="150" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#2e7d32">KOTA KARUNIA</text>
                   <text x="400" y="170" textAnchor="middle" fontSize="12" fill="#666">Pusat Energi Berkelanjutan</text>
-                  
+
                   {/* Office label */}
                   <text x="420" y="275" fontSize="11" fontWeight="bold" fill="#1976d2">Kantor GSCE</text>
                   <text x="420" y="290" fontSize="9" fill="#666">Jl. Neraca No. 1</text>
-                  
+
                   {/* District labels */}
                   <text x="300" y="220" fontSize="10" fill="#4a4a4a">Taman Energi</text>
                   <text x="500" y="340" fontSize="10" fill="#4a4a4a">Taman Hijau</text>
