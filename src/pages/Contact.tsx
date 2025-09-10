@@ -101,11 +101,43 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-1">
+                  <div className="space-y-3">
                     {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-sm text-muted-foreground">
-                        {detail}
-                      </p>
+                      <div key={idx}>
+                        <p className="text-sm text-muted-foreground">
+                          {info.title === "Alamat Email" ? (
+                            <a 
+                              href={`mailto:${detail}`}
+                              className="hover:text-primary transition-smooth cursor-pointer underline"
+                            >
+                              {detail}
+                            </a>
+                          ) : info.title === "Nomor Telepon" ? (
+                            <a 
+                              href={`tel:${detail}`}
+                              className="hover:text-primary transition-smooth cursor-pointer"
+                            >
+                              {detail}
+                            </a>
+                          ) : (
+                            detail
+                          )}
+                        </p>
+                        {info.title === "Alamat Email" && (
+                          <div className="mt-3">
+                            <a href={`mailto:${detail}`}>
+                              <Button 
+                                variant="hero" 
+                                size="sm" 
+                                className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-all duration-300"
+                              >
+                                <Send className="h-4 w-4 mr-2" />
+                                Kirim Pesan
+                              </Button>
+                            </a>
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </CardContent>
