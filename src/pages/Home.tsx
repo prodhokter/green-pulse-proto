@@ -391,25 +391,45 @@ const Home = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {seedData.news.slice(0, 4).map((article) => (
-              <Card key={article.id} className="transition-smooth hover:shadow-card group cursor-pointer">
-                <CardHeader className="pb-2">
-                  <Badge variant="outline" className="w-fit mb-2">
-                    {article.category}
-                  </Badge>
-                  <CardTitle className="text-lg line-clamp-2 group-hover:text-primary transition-smooth">
-                    {article.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-                    {article.excerpt}
-                  </p>
-                  <div className="flex items-center space-x-2 text-xs text-muted-foreground">
-                    <Calendar className="h-3 w-3" />
-                    <span>{new Date(article.date).toLocaleDateString('id-ID')}</span>
+              <Link key={article.id} to={`/news/${article.id}`} className="block">
+                <Card className="transition-smooth hover:shadow-card group cursor-pointer h-full flex flex-col">
+                  {/* Article Image */}
+                  <div className="relative h-40 overflow-hidden">
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMzUgMTIwSDI2NVYxODBIMTM1VjEyMFoiIGZpbGw9IiNEMUQ1REIiLz4KPGV4dCB4PSIyMDAiIHk9IjE2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZCNzI4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0Ij5HYW1iYXIgQmVyaXRhPC90ZXh0Pgo8L3N2Zz4K';
+                      }}
+                    />
+                    <div className="absolute top-3 left-3">
+                      <Badge variant="default" className="shadow-sm">
+                        {article.category}
+                      </Badge>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+
+                  <CardHeader className="flex-grow pb-2">
+                    <CardTitle className="text-lg line-clamp-2 group-hover:text-primary transition-smooth mb-2">
+                      {article.title}
+                    </CardTitle>
+                    <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
+                      {article.excerpt}
+                    </p>
+                  </CardHeader>
+                  
+                  <CardContent className="pt-0">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2 text-xs text-muted-foreground">
+                        <Calendar className="h-3 w-3" />
+                        <span>{new Date(article.date).toLocaleDateString('id-ID')}</span>
+                      </div>
+                      <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
