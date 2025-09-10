@@ -23,7 +23,7 @@ const About = () => {
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center text-2xl">
               <Award className="h-8 w-8 mr-3 text-secondary" />
-              Visi Kami
+              Visi
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-0">
@@ -38,7 +38,7 @@ const About = () => {
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center text-2xl">
               <Target className="h-8 w-8 mr-3 text-primary" />
-              Misi Kami
+              Misi
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-0">

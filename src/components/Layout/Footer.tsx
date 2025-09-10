@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Strategi jangka panjang pemerintah Kota Karunia menuju transisi Energi Baru Terbarukan (EBT)
-              melalui program strategis, penerapan teknologi inovatif, dan keterlibatan berbagai pihak.
+              melalui program strategis, penerapan teknologi inovatif, dan kolaborasi multipihak.
             </p>
           </div>
 

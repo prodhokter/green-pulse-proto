@@ -55,7 +55,7 @@ const Home = () => {
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               Strategi jangka panjang pemerintah Kota Karunia menuju transisi Energi Baru Terbarukan (EBT)
-              melalui program strategis, penerapan teknologi inovatif, dan keterlibatan berbagai pihak.
+              melalui program strategis, penerapan teknologi inovatif, dan kolaborasi multipihak.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/programs/government">
