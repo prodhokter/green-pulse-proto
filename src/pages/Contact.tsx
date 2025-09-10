@@ -106,14 +106,14 @@ const Contact = () => {
                       <div key={idx}>
                         <p className="text-sm text-muted-foreground">
                           {info.title === "Alamat Email" ? (
-                            <a 
+                            <a
                               href={`mailto:${detail}`}
                               className="hover:text-primary transition-smooth cursor-pointer underline"
                             >
                               {detail}
                             </a>
                           ) : info.title === "Nomor Telepon" ? (
-                            <a 
+                            <a
                               href={`tel:${detail}`}
                               className="hover:text-primary transition-smooth cursor-pointer"
                             >
@@ -126,9 +126,9 @@ const Contact = () => {
                         {info.title === "Alamat Email" && (
                           <div className="mt-3">
                             <a href={`mailto:${detail}`}>
-                              <Button 
-                                variant="hero" 
-                                size="sm" 
+                              <Button
+                                variant="hero"
+                                size="sm"
                                 className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-all duration-300"
                               >
                                 <Send className="h-4 w-4 mr-2" />
