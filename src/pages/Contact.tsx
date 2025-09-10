@@ -104,27 +104,18 @@ const Contact = () => {
                   <div className="space-y-3">
                     {info.details.map((detail, idx) => (
                       <div key={idx}>
-                        <p className="text-sm text-muted-foreground">
-                          {info.title === "Alamat Email" ? (
+                        {info.title === "Alamat Email" ? (
+                          <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border border-primary/20 rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300">
+                            <div className="flex items-center space-x-2 mb-2">
+                              <Mail className="h-4 w-4 text-primary" />
+                              <span className="text-xs font-medium text-primary uppercase tracking-wide">Email Address</span>
+                            </div>
                             <a
                               href={`mailto:${detail}`}
-                              className="hover:text-primary transition-smooth cursor-pointer underline"
+                              className="text-foreground font-semibold text-base hover:text-primary transition-smooth cursor-pointer block mb-3 break-all"
                             >
                               {detail}
                             </a>
-                          ) : info.title === "Nomor Telepon" ? (
-                            <a
-                              href={`tel:${detail}`}
-                              className="hover:text-primary transition-smooth cursor-pointer"
-                            >
-                              {detail}
-                            </a>
-                          ) : (
-                            detail
-                          )}
-                        </p>
-                        {info.title === "Alamat Email" && (
-                          <div className="mt-3">
                             <a href={`mailto:${detail}`}>
                               <Button
                                 variant="hero"
@@ -135,6 +126,24 @@ const Contact = () => {
                                 Kirim Pesan
                               </Button>
                             </a>
+                          </div>
+                        ) : (
+                          <p className="text-sm text-muted-foreground">
+                            {info.title === "Nomor Telepon" ? (
+                              <a
+                                href={`tel:${detail}`}
+                                className="hover:text-primary transition-smooth cursor-pointer"
+                              >
+                                {detail}
+                              </a>
+                            ) : (
+                              detail
+                            )}
+                          </p>
+                        )}
+                        {info.title === "Alamat Email" && (
+                          <div className="mt-3">
+                            {/* Button moved inside the email frame above */}
                           </div>
                         )}
                       </div>
