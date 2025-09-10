@@ -53,7 +53,7 @@ const Contact = () => {
       details: [
         "Jl. Neraca No. 1",
         "Kota Karunia 12112",
-        "Indonesia"
+        "Kota Karunia"
       ]
     },
     {

@@ -5,93 +5,108 @@ import { Target, Users, Award, BookOpen } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="mb-12">
-        <h1 className="text-4xl font-bold text-foreground mb-4">
-          Tentang Strategi Hijau untuk Energi Bersih
+    <div className="container mx-auto px-4 py-12 max-w-7xl">
+      {/* Header Section */}
+      <div className="text-center mb-16">
+        <h1 className="text-5xl font-bold text-foreground mb-6">
+          GSCE (Green Strategy for Clean Energy)
         </h1>
-        <p className="text-xl text-muted-foreground max-w-3xl">
-          Inisiatif pemerintah Indonesia yang komprehensif mendorong transisi menuju energi berkelanjutan 
-          melalui program strategis, teknologi inovatif, dan keterlibatan masyarakat.
+        <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          Strategi jangka panjang pemerintah Kota Karunia menuju transisi Energi Baru Terbarukan (EBT)
+          melalui program strategis, penerapan teknologi inovatif, dan kolaborasi multipihak.
         </p>
       </div>
 
-      {/* Mission & Vision */}
-      <div className="grid lg:grid-cols-2 gap-8 mb-12">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center">
-              <Target className="h-6 w-6 mr-2 text-primary" />
-              Misi Kami
+      {/* Vision & Mission */}
+      <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <Card className="h-full border-2 hover:shadow-lg transition-all duration-300">
+          <CardHeader className="pb-4">
+            <CardTitle className="flex items-center text-2xl">
+              <Award className="h-8 w-8 mr-3 text-secondary" />
+              Visi Kami
             </CardTitle>
           </CardHeader>
-          <CardContent>
-            <p className="text-muted-foreground leading-relaxed">
-              Mempercepat transisi Indonesia menuju energi bersih berkelanjutan dengan mengimplementasikan 
-              sistem monitoring komprehensif, program pemerintah strategis, dan mendorong inovasi 
-              dalam teknologi energi terbarukan sambil memastikan pertumbuhan ekonomi dan 
-              keberlanjutan lingkungan.
+          <CardContent className="pt-0">
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              Menanggulangi krisis energi Kota Karunia menuju EBT, mendorong pertumbuhan ekonomi,
+              serta menciptakan kota yang inklusif dan ramah lingkungan.
             </p>
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center">
-              <Award className="h-6 w-6 mr-2 text-secondary" />
-              Visi Kami
+        <Card className="h-full border-2 hover:shadow-lg transition-all duration-300">
+          <CardHeader className="pb-4">
+            <CardTitle className="flex items-center text-2xl">
+              <Target className="h-8 w-8 mr-3 text-primary" />
+              Misi Kami
             </CardTitle>
           </CardHeader>
-          <CardContent>
-            <p className="text-muted-foreground leading-relaxed">
-              Memposisikan Indonesia sebagai pemimpin global dalam adopsi dan inovasi energi bersih, 
-              mencapai netralitas karbon pada tahun 2060 sambil menciptakan jutaan lapangan kerja hijau dan 
-              membangun komunitas energi berkelanjutan di seluruh nusantara.
-            </p>
+          <CardContent className="pt-0">
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <span className="font-bold text-primary text-lg mr-3 mt-1">1.</span>
+                <span className="text-muted-foreground leading-relaxed">
+                  Mempercepat transisi energi Kota Karunia menuju Energi Baru Terbarukan (EBT) dengan
+                  mengimplementasikan sistem monitoring berbasis dashboard indikator Real-time, Program
+                  Pemerintah Strategis, dan kolaborasi multipihak untuk mendorong inovasi dalam teknologi
+                  energi terbarukan
+                </span>
+              </div>
+              <div className="flex items-start">
+                <span className="font-bold text-primary text-lg mr-3 mt-1">2.</span>
+                <span className="text-muted-foreground leading-relaxed">
+                  Memastikan pertumbuhan ekonomi dan keberlanjutan lingkungan.
+                </span>
+              </div>
+            </div>
           </CardContent>
         </Card>
       </div>
 
       {/* Key Objectives */}
-      <div className="mb-12">
-        <h2 className="text-3xl font-bold text-foreground mb-6">Tujuan Utama</h2>
-        <div className="grid md:grid-cols-2 gap-6">
+      <div className="mb-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-foreground mb-4">Tujuan Kami</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Tiga pilar utama yang menjadi fokus dalam mencapai visi energi berkelanjutan
+          </p>
+        </div>
+        <div className="grid lg:grid-cols-3 gap-8">
           {[
             {
-              title: "Pengurangan Emisi Karbon",
-              description: "Mengurangi emisi karbon nasional sebesar 35% pada tahun 2030 melalui monitoring komprehensif dan intervensi strategis.",
+              title: "Menanggulangi Krisis Energi",
+              description: "Mengatasi ketergantungan pada energi fosil dan mengimplementasikan solusi energi berkelanjutan untuk Kota Karunia.",
               icon: Target,
-              badge: "Lingkungan"
+              badge: "Energi",
+              color: "text-green-600"
             },
             {
-              title: "Ekspansi Energi Terbarukan", 
-              description: "Meningkatkan kapasitas energi terbarukan menjadi 50% dari total bauran energi melalui proyek tenaga surya, angin, dan hidroelektrik.",
-              icon: Award,
-              badge: "Energi"
-            },
-            {
-              title: "Penciptaan Lapangan Kerja Hijau",
-              description: "Menciptakan 2 juta lapangan kerja hijau di berbagai sektor termasuk energi terbarukan, penelitian, dan teknologi berkelanjutan.",
+              title: "Kota Karunia yang Inklusif",
+              description: "Menciptakan kota yang memberikan akses energi bersih dan terjangkau bagi seluruh lapisan masyarakat.",
               icon: Users,
-              badge: "Ekonomi"
+              badge: "Inklusivitas",
+              color: "text-blue-600"
             },
             {
-              title: "Inovasi & Pendidikan",
-              description: "Membangun 100+ innovation hub dan melatih 50.000 profesional dalam teknologi energi bersih dan praktik berkelanjutan.",
-              icon: BookOpen,
-              badge: "Inovasi"
+              title: "Penerapan Kebijakan Dinamis dan Responsif",
+              description: "Mengembangkan dan menerapkan kebijakan energi yang adaptif terhadap perubahan dan kebutuhan masyarakat.",
+              icon: Award,
+              badge: "Kebijakan",
+              color: "text-purple-600"
             }
           ].map((objective, index) => (
-            <Card key={index} className="transition-smooth hover:shadow-card">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <objective.icon className="h-8 w-8 text-primary" />
-                  <Badge variant="outline">{objective.badge}</Badge>
+            <Card key={index} className="h-full border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardHeader className="text-center pb-4">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10">
+                    <objective.icon className={`h-12 w-12 ${objective.color}`} />
+                  </div>
                 </div>
-                <CardTitle className="text-lg">{objective.title}</CardTitle>
+                <Badge variant="outline" className="mb-3 mx-auto">{objective.badge}</Badge>
+                <CardTitle className="text-xl">{objective.title}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+              <CardContent className="text-center pt-0">
+                <p className="text-muted-foreground leading-relaxed">
                   {objective.description}
                 </p>
               </CardContent>
@@ -99,35 +114,6 @@ const About = () => {
           ))}
         </div>
       </div>
-
-      {/* Legal Framework */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Kerangka Hukum & Kewenangan</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="font-semibold mb-3 text-foreground">Landasan Regulasi</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Peraturan Presiden No. 22/2017 tentang Rencana Umum Energi Nasional</li>
-                <li>• Undang-Undang No. 30/2007 tentang Pengelolaan Energi</li>
-                <li>• Peraturan Pemerintah No. 79/2014 tentang Kebijakan Energi Nasional</li>
-                <li>• Peraturan Presiden No. 112/2022 tentang Percepatan Energi Terbarukan</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-3 text-foreground">Mitra Implementasi</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Kementerian Energi dan Sumber Daya Mineral</li>
-                <li>• Kementerian Lingkungan Hidup dan Kehutanan</li>
-                <li>• Badan Riset dan Inovasi Nasional (BRIN)</li>
-                <li>• Badan Pengembangan Energi Daerah</li>
-              </ul>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
     </div>
   );
 };
