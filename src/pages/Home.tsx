@@ -43,9 +43,6 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
         <div className="relative container mx-auto px-4 py-24 lg:py-32">
           <div className="max-w-2xl">
-            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-              PerDa Transisi Energi Kota Karunia
-            </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Membangun
               <span className="block text-primary">
