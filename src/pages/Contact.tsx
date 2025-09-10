@@ -173,7 +173,7 @@ const Contact = () => {
                     e.currentTarget.nextElementSibling.style.display = 'flex';
                   }}
                 />
-                <div 
+                <div
                   className="w-full h-full bg-slate-200 flex items-center justify-center text-muted-foreground hidden"
                   style={{ display: 'none' }}
                 >
