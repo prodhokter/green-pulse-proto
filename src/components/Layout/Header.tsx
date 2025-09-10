@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, Menu, X, Leaf, BarChart3 } from 'lucide-react';
@@ -6,9 +6,32 @@ import { ChevronDown, Menu, X, Leaf, BarChart3 } from 'lucide-react';
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProgramsDropdownOpen, setIsProgramsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
+
+  const handleDropdownEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setIsProgramsDropdownOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsProgramsDropdownOpen(false);
+    }, 150);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   const navigation = [
     { name: 'Beranda', href: '/' },
@@ -35,8 +58,10 @@ const Header = () => {
               <Leaf className="h-6 w-6 text-primary-foreground" />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-foreground">Strategi Hijau</h1>
-              <p className="text-xs text-muted-foreground">Energi Bersih Indonesia</p>
+              <div className="flex flex-col leading-tight">
+                <h1 className="text-lg font-bold text-foreground">Green Strategy</h1>
+                <p className="text-sm text-muted-foreground">for Clean Energy 2025</p>
+              </div>
             </div>
           </Link>
 
@@ -45,28 +70,39 @@ const Header = () => {
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.isDropdown ? (
-                  <div 
+                  <div
+                    ref={dropdownRef}
                     className="relative"
-                    onMouseEnter={() => setIsProgramsDropdownOpen(true)}
-                    onMouseLeave={() => setIsProgramsDropdownOpen(false)}
+                    onMouseEnter={handleDropdownEnter}
+                    onMouseLeave={handleDropdownLeave}
                   >
-                    <button className="flex items-center space-x-1 text-sm font-medium text-foreground hover:text-primary transition-smooth">
+                    <button
+                      className="flex items-center space-x-1 text-sm font-medium text-foreground hover:text-primary transition-smooth"
+                      onClick={() => setIsProgramsDropdownOpen(!isProgramsDropdownOpen)}
+                    >
                       <span>{item.name}</span>
-                      <ChevronDown className="h-4 w-4" />
+                      <ChevronDown className={`h-4 w-4 transition-transform ${isProgramsDropdownOpen ? 'rotate-180' : ''}`} />
                     </button>
-                    
+
                     {isProgramsDropdownOpen && (
-                      <div className="absolute top-full left-0 mt-1 w-64 rounded-lg border border-border bg-popover p-2 shadow-lg">
-                        {item.items?.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.href}
-                            className="block rounded-md px-3 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-smooth"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
+                      <>
+                        {/* Invisible bridge to prevent dropdown from closing */}
+                        <div className="absolute top-full left-0 w-64 h-1 bg-transparent" />
+                        <div className="absolute top-full left-0 mt-1 w-64 rounded-lg border border-border bg-popover shadow-lg z-50">
+                          <div className="p-1">
+                            {item.items?.map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                to={subItem.href}
+                                className="block rounded-md px-3 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-smooth"
+                                onClick={() => setIsProgramsDropdownOpen(false)}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </>
                     )}
                   </div>
                 ) : (
@@ -93,7 +129,7 @@ const Header = () => {
                 Lihat Dashboard
               </Button>
             </Link>
-            
+
             {/* Mobile menu button */}
             <Button
               variant="ghost"
@@ -147,7 +183,7 @@ const Header = () => {
                   )}
                 </div>
               ))}
-              
+
               <div className="pt-4 border-t border-border">
                 <Link to="/programs/government" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button variant="hero" size="sm" className="w-full">

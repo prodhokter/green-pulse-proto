@@ -36,7 +36,7 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
@@ -44,18 +44,18 @@ const Home = () => {
         <div className="relative container mx-auto px-4 py-24 lg:py-32">
           <div className="max-w-2xl">
             <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-              Strategi Hijau untuk Energi Bersih
+              PerDa Transisi Energi Kota Karunia
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Membangun 
+              Membangun
               <span className="block text-primary">
                 Masa Depan Berkelanjutan
-              </span> 
-              untuk Indonesia
+              </span>
+              untuk Kota Karunia
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Inisiatif pemerintah yang komprehensif mendorong transisi Indonesia menuju energi bersih 
-              melalui sistem monitoring inovatif, program strategis, dan keterlibatan masyarakat.
+              Strategi jangka panjang pemerintah Kota Karunia menuju transisi Energi Baru Terbarukan (EBT)
+              melalui program strategis, penerapan teknologi inovatif, dan keterlibatan berbagai pihak.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/programs/government">
@@ -83,13 +83,13 @@ const Home = () => {
               Program Strategis Kami
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Dua inisiatif komprehensif yang bekerja bersama untuk mencapai target energi bersih Indonesia
+              Dua inisiatif komprehensif yang bekerja bersama untuk mencapai target energi bersih Kota Karunia
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Government Program Card */}
-            <Card className="relative overflow-hidden transition-smooth hover:shadow-card group">
+            <Card className="relative overflow-hidden transition-smooth hover:shadow-card group flex flex-col">
               <div className="absolute top-0 right-0 w-32 h-32 gradient-primary opacity-10 rounded-full -translate-y-16 translate-x-16" />
               <CardHeader>
                 <div className="flex items-center space-x-2 mb-2">
@@ -98,11 +98,11 @@ const Home = () => {
                 </div>
                 <CardTitle className="text-2xl">Karunia Green Government</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-grow flex flex-col">
                 <p className="text-muted-foreground mb-6">
                   {seedData.programs.government.description}
                 </p>
-                <div className="space-y-2 mb-6">
+                <div className="space-y-2 mb-6 flex-grow">
                   {seedData.programs.government.objectives.slice(0, 2).map((objective, index) => (
                     <div key={index} className="flex items-start space-x-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
@@ -110,7 +110,7 @@ const Home = () => {
                     </div>
                   ))}
                 </div>
-                <Link to="/programs/government">
+                <Link to="/programs/government" className="mt-auto">
                   <Button variant="default" className="w-full group-hover:shadow-lg">
                     Pelajari Lebih Lanjut
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -120,7 +120,7 @@ const Home = () => {
             </Card>
 
             {/* Innovation Hub Card */}
-            <Card className="relative overflow-hidden transition-smooth hover:shadow-card group">
+            <Card className="relative overflow-hidden transition-smooth hover:shadow-card group flex flex-col">
               <div className="absolute top-0 right-0 w-32 h-32 gradient-secondary opacity-10 rounded-full -translate-y-16 translate-x-16" />
               <CardHeader>
                 <div className="flex items-center space-x-2 mb-2">
@@ -129,11 +129,11 @@ const Home = () => {
                 </div>
                 <CardTitle className="text-2xl">Karunia Green Innovation Hub</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-grow flex flex-col">
                 <p className="text-muted-foreground mb-6">
                   {seedData.programs.innovation.description}
                 </p>
-                <div className="space-y-2 mb-6">
+                <div className="space-y-2 mb-6 flex-grow">
                   {seedData.programs.innovation.objectives.slice(0, 2).map((objective, index) => (
                     <div key={index} className="flex items-start space-x-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0" />
@@ -141,12 +141,91 @@ const Home = () => {
                     </div>
                   ))}
                 </div>
-                <Link to="/programs/innovation">
+                <Link to="/programs/innovation" className="mt-auto">
                   <Button variant="secondary" className="w-full group-hover:shadow-lg">
                     Pelajari Lebih Lanjut
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Visi, Misi & Tujuan */}
+      <section className="py-16 lg:py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Visi, Misi & Tujuan
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Landasan strategis dalam mencapai transisi energi berkelanjutan untuk Kota Karunia
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Visi */}
+            <Card className="relative overflow-hidden">
+              <CardHeader>
+                <CardTitle className="text-xl text-center mb-4">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg gradient-primary mb-3">
+                    <Users className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <div>Visi</div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-center leading-relaxed">
+                  {seedData.programs.government.visi}
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Misi */}
+            <Card className="relative overflow-hidden">
+              <CardHeader>
+                <CardTitle className="text-xl text-center mb-4">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg gradient-secondary mb-3">
+                    <BarChart3 className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <div>Misi</div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  {seedData.programs.government.misi.map((misi, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-sm font-medium text-secondary">{index + 1}</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{misi}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Tujuan */}
+            <Card className="relative overflow-hidden">
+              <CardHeader>
+                <CardTitle className="text-xl text-center mb-4">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg gradient-primary mb-3">
+                    <Lightbulb className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <div>Tujuan</div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  {seedData.programs.government.tujuan.map((tujuan, index) => (
+                    <div key={index} className="flex items-start space-x-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">{tujuan}</p>
+                    </div>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -164,7 +243,7 @@ const Home = () => {
               Dashboard Emisi Karbon Live
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Pantau jejak karbon Indonesia secara real-time dengan sistem monitoring canggih kami
+              Pantau jejak karbon Kota Karunia secara real-time dengan sistem monitoring canggih kami
             </p>
           </div>
 
@@ -203,8 +282,8 @@ const Home = () => {
                   <div className="text-sm text-muted-foreground">dari target</div>
                   <div className="mt-2">
                     <div className="w-full bg-muted rounded-full h-2">
-                      <div 
-                        className="bg-primary h-2 rounded-full transition-smooth" 
+                      <div
+                        className="bg-primary h-2 rounded-full transition-smooth"
                         style={{ width: `${Math.min(100, (currentEmissions / seedData.emissions.targetDaily) * 100)}%` }}
                       />
                     </div>
@@ -264,8 +343,8 @@ const Home = () => {
                   <div className="flex-1 grid grid-cols-2 gap-3">
                     {seedData.emissions.powerSources.map((source) => (
                       <div key={source.name} className="flex items-center space-x-2">
-                        <div 
-                          className="w-3 h-3 rounded-full" 
+                        <div
+                          className="w-3 h-3 rounded-full"
                           style={{ backgroundColor: source.color }}
                         />
                         <div className="text-sm">

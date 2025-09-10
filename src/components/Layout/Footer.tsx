@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Leaf, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Leaf, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -14,20 +14,16 @@ const Footer = () => {
                 <Leaf className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-foreground">Strategi Hijau</h3>
-                <p className="text-sm text-muted-foreground">Energi Bersih Indonesia</p>
+                <div className="flex flex-col leading-tight">
+                  <h3 className="text-lg font-bold text-foreground">Green Strategy</h3>
+                  <p className="text-sm text-muted-foreground">for Clean Energy</p>
+                </div>
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Memimpin transisi Indonesia menuju energi bersih berkelanjutan melalui program inovatif, 
-              kemitraan strategis, dan sistem monitoring komprehensif.
+              Strategi jangka panjang pemerintah Kota Karunia menuju transisi Energi Baru Terbarukan (EBT)
+              melalui program strategis, penerapan teknologi inovatif, dan keterlibatan berbagai pihak.
             </p>
-            <div className="flex space-x-4">
-              <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary transition-smooth cursor-pointer" />
-              <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary transition-smooth cursor-pointer" />
-              <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary transition-smooth cursor-pointer" />
-              <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-smooth cursor-pointer" />
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -74,15 +70,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>Jakarta, Indonesia</span>
+                <span>Jl. Neraca No. 1, Kota Karunia 12112</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary" />
-                <span>+62 21 1234 5678</span>
+                <span>+62 271 1234 5678</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>info@strategihijau.gov.id</span>
+                <span>GreenStrategyforCleanEnergy@gmail.com</span>
               </div>
             </div>
           </div>
@@ -90,10 +86,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-border">
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
-            <p className="text-sm text-muted-foreground">
-              © 2024 Strategi Hijau untuk Energi Bersih. Seluruh hak cipta dilindungi.
-            </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0">
             <div className="flex space-x-4">
               <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
                 Kebijakan Privasi

@@ -27,14 +27,14 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulasi pengiriman formulir
     setTimeout(() => {
       toast({
         title: "Pesan Terkirim!",
         description: "Terima kasih telah menghubungi kami. Kami akan segera merespons.",
       });
-      
+
       // Reset form
       setFormData({
         name: '',
@@ -51,8 +51,8 @@ const Contact = () => {
       icon: MapPin,
       title: "Alamat Kantor",
       details: [
-        "Jl. Medan Merdeka Selatan No. 13",
-        "Jakarta Pusat 10110",
+        "Jl. Neraca No. 1",
+        "Kota Karunia 12112",
         "Indonesia"
       ]
     },
@@ -60,27 +60,14 @@ const Contact = () => {
       icon: Phone,
       title: "Nomor Telepon",
       details: [
-        "+62 21 1234 5678",
-        "+62 21 8765 4321",
-        "Hotline: 14000 (24/7)"
+        "+62 271 1234 5678"
       ]
     },
     {
       icon: Mail,
       title: "Alamat Email",
       details: [
-        "info@strategihijau.gov.id",
-        "dukungan@strategihijau.gov.id",
-        "kemitraan@strategihijau.gov.id"
-      ]
-    },
-    {
-      icon: Clock,
-      title: "Jam Operasional",
-      details: [
-        "Senin - Jumat: 08:00 - 17:00 WIB",
-        "Sabtu: 08:00 - 12:00 WIB",
-        "Minggu: Tutup"
+        "GreenStrategyforCleanEnergy@gmail.com"
       ]
     }
   ];
@@ -92,7 +79,7 @@ const Contact = () => {
           Hubungi Kami
         </h1>
         <p className="text-xl text-muted-foreground max-w-3xl">
-          Hubungi tim kami untuk pertanyaan tentang program energi bersih, 
+          Hubungi tim kami untuk pertanyaan tentang program energi bersih,
           kemitraan, atau dukungan teknis.
         </p>
       </div>
@@ -103,7 +90,7 @@ const Contact = () => {
           <h2 className="text-2xl font-bold text-foreground mb-6">
             Mari Terhubung
           </h2>
-          
+
           <div className="grid gap-6">
             {contactInfo.map((info, index) => (
               <Card key={index} className="transition-smooth hover:shadow-card">
@@ -126,7 +113,7 @@ const Contact = () => {
             ))}
           </div>
 
-          {/* Map Placeholder */}
+          {/* Map with Google Maps Embed */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center">
@@ -135,10 +122,17 @@ const Contact = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="bg-muted/30 h-48 rounded-lg flex items-center justify-center">
-                <p className="text-muted-foreground text-sm">
-                  Peta interaktif akan disematkan di sini
-                </p>
+              <div className="w-full h-64 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4056129.348456078!2d108.56324567345446!3d-6.882958973557683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2da393f79feeb5c5%3A0x1030bfbca7cb850!2sJawa%20Timur!5e0!3m2!1sid!2sid!4v1757463218705!5m2!1sid!2sid"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Lokasi Kantor Green Strategy for Clean Energy 2025"
+                />
               </div>
             </CardContent>
           </Card>
@@ -180,7 +174,7 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="subject">Subjek *</Label>
                   <Input
@@ -192,7 +186,7 @@ const Contact = () => {
                     required
                   />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="message">Pesan *</Label>
                   <Textarea
@@ -205,11 +199,11 @@ const Contact = () => {
                     required
                   />
                 </div>
-                
-                <Button 
-                  type="submit" 
-                  variant="hero" 
-                  size="lg" 
+
+                <Button
+                  type="submit"
+                  variant="hero"
+                  size="lg"
                   className="w-full"
                   disabled={isSubmitting}
                 >
@@ -222,7 +216,7 @@ const Contact = () => {
                     </>
                   )}
                 </Button>
-                
+
                 <p className="text-xs text-muted-foreground text-center">
                   * Kolom wajib diisi. Kami biasanya merespons dalam 24 jam pada hari kerja.
                 </p>

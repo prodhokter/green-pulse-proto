@@ -38,79 +38,96 @@
       { "name": "Lainnya", "value": 1.5, "color": "#a855f7" }
     ],
     "regionalData": [
-      { "region": "Jakarta", "emissions": 145000, "population": 10770000 },
-      { "region": "Surabaya", "emissions": 98000, "population": 2800000 },
-      { "region": "Bandung", "emissions": 76000, "population": 2500000 },
-      { "region": "Medan", "emissions": 89000, "population": 2400000 },
-      { "region": "Semarang", "emissions": 54000, "population": 1600000 }
+      { "region": "Kecamatan Karunia Utara", "emissions": 145000, "population": 45000 },
+      { "region": "Kecamatan Karunia Selatan", "emissions": 98000, "population": 38000 },
+      { "region": "Kecamatan Karunia Timur", "emissions": 76000, "population": 42000 },
+      { "region": "Kecamatan Karunia Barat", "emissions": 89000, "population": 35000 },
+      { "region": "Kecamatan Karunia Tengah", "emissions": 54000, "population": 40000 }
     ]
   },
   "news": [
     {
       "id": 1,
-      "title": "Indonesia Luncurkan Rencana Ambisius Pengurangan Karbon 2030",
-      "excerpt": "Pemerintah mengumumkan strategi komprehensif untuk mengurangi emisi karbon nasional sebesar 35% sebelum tahun 2030.",
-      "category": "Update Kebijakan",
-      "date": "2024-01-15",
+      "title": "Kota Karunia Luncurkan PerDa Transisi Energi dengan Carbon Tax Policy",
+      "excerpt": "Pemerintah Kota Karunia mengumumkan Peraturan Daerah Transisi Energi yang mencakup kebijakan carbon tax untuk mengurangi emisi karbon sebesar 35% sebelum tahun 2030.",
+      "category": "PerDa Transisi Energi",
+      "date": "2025-01-15",
       "image": "/news1.jpg"
     },
     {
       "id": 2,
-      "title": "Proyek PLTS Baru Disetujui di Jawa Timur",
-      "excerpt": "Proyek instalasi pembangkit listrik tenaga surya 500MW mendapat lampu hijau, diperkirakan akan memasok listrik untuk 200.000 rumah.",
+      "title": "Proyek PLTS Baru Disetujui di Kecamatan Karunia Timur",
+      "excerpt": "Proyek instalasi pembangkit listrik tenaga surya 50MW mendapat lampu hijau, diperkirakan akan memasok listrik untuk 20.000 rumah di Kota Karunia.",
       "category": "Update Proyek",
-      "date": "2024-01-12",
+      "date": "2025-01-12",
       "image": "/news2.jpg"
     },
     {
       "id": 3,
-      "title": "Green Innovation Hub Resmi Dibuka di Bandung",
-      "excerpt": "Fasilitas penelitian canggih untuk mempercepat pengembangan teknologi energi bersih telah diresmikan.",
+      "title": "Green Innovation Hub Resmi Dibuka di Karunia Tengah",
+      "excerpt": "Fasilitas penelitian canggih untuk mempercepat pengembangan teknologi energi bersih telah diresmikan di pusat Kota Karunia.",
       "category": "Inovasi",
-      "date": "2024-01-10",
+      "date": "2025-01-10",
       "image": "/news3.jpg"
     },
     {
       "id": 4,
-      "title": "Investasi Energi Angin Mencapai Rekor Tertinggi",
-      "excerpt": "Investasi asing dalam proyek energi angin lepas pantai mencapai total $2.3 miliar pada kuartal ini.",
-      "category": "Investasi",
-      "date": "2024-01-08",
+      "title": "Program Green Skilling & Up Skilling untuk Masyarakat Karunia",
+      "excerpt": "Pemerintah daerah meluncurkan program pelatihan ganda untuk meningkatkan keterampilan hijau masyarakat Kota Karunia senilai 2.3 miliar rupiah.",
+      "category": "Program Pelatihan",
+      "date": "2025-01-08",
       "image": "/news4.jpg"
     }
   ],
   "programs": {
     "government": {
       "title": "Karunia Green Government",
-      "description": "Inisiatif pemerintah yang komprehensif untuk mentransisikan Indonesia menuju sistem energi berkelanjutan melalui reformasi kebijakan, pengembangan infrastruktur, dan keterlibatan masyarakat.",
+      "description": "Strategi jangka panjang pemerintah Kota Karunia menuju transisi Energi Baru Terbarukan (EBT) melalui program strategis, penerapan teknologi inovatif, dan keterlibatan berbagai pihak.",
+      "visi": "Menanggulangi krisis energi Kota Karunia menuju EBT, mendorong pertumbuhan ekonomi, serta menciptakan kota yang inklusif dan ramah lingkungan.",
+      "misi": [
+        "Mempercepat transisi energi Kota Karunia menuju Energi Baru Terbarukan (EBT) dengan mengimplementasikan sistem monitoring berbasis dashboard indikator Real-time, Program Pemerintah Strategis, dan kolaborasi multipihak untuk mendorong inovasi dalam teknologi energi terbarukan",
+        "Memastikan pertumbuhan ekonomi dan keberlanjutan lingkungan"
+      ],
+      "tujuan": [
+        "Menanggulangi krisis energi",
+        "Kota Karunia yang inklusif",
+        "Penerapan kebijakan dinamis dan responsif"
+      ],
       "objectives": [
-        "Mengurangi emisi karbon nasional sebesar 35% pada tahun 2030",
-        "Meningkatkan kapasitas energi terbarukan menjadi 50% dari total bauran energi",
-        "Menciptakan 2 juta lapangan kerja hijau di seluruh nusantara",
-        "Membangun 100 komunitas energi berkelanjutan"
+        "Mengurangi emisi karbon Kota Karunia sebesar 35% pada tahun 2030 melalui PerDa Transisi Energi",
+        "Meningkatkan kapasitas energi terbarukan menjadi 50% dari total bauran energi kota",
+        "Menciptakan 5.000 lapangan kerja hijau di seluruh kecamatan Kota Karunia",
+        "Membangun 25 desa energi berkelanjutan di wilayah Kota Karunia",
+        "Implementasi carbon tax policy untuk mendorong transisi energi bersih"
       ],
       "features": [
-        "Dashboard monitoring emisi real-time",
-        "Pelacakan kinerja regional",
-        "Pengawasan implementasi kebijakan",
-        "Program bantuan langsung tunai"
+        "Dashboard monitoring emisi real-time tingkat kota",
+        "Pelacakan kinerja per kecamatan dan desa",
+        "Pengawasan implementasi PerDa Transisi Energi",
+        "Program Green Skilling & Up Skilling untuk masyarakat Kota Karunia"
       ]
     },
     "innovation": {
       "title": "Karunia Green Innovation Hub",
-      "description": "Pusat penelitian dan pengembangan canggih yang mendorong inovasi teknologi energi bersih, program edukasi, dan kemitraan kolaboratif.",
+      "description": "Pusat penelitian dan pengembangan canggih yang mendorong inovasi teknologi energi bersih untuk Kota Karunia, program edukasi Green Skilling & Up Skilling, dan kemitraan kolaboratif untuk masyarakat lokal.",
       "objectives": [
-        "Mengembangkan teknologi energi terbarukan terdepan",
-        "Melatih 50.000 profesional dalam keahlian hijau",
-        "Membangun kemitraan dengan 200+ organisasi",
-        "Meluncurkan 100 proyek energi bersih inovatif"
+        "Mengembangkan teknologi energi terbarukan untuk Kota Karunia",
+        "Melaksanakan program Green Skilling untuk 2.500 masyarakat Kota Karunia",
+        "Melaksanakan program Up Skilling untuk 2.500 masyarakat Kota Karunia",
+        "Membangun kemitraan dengan 50+ organisasi lokal dan regional",
+        "Meluncurkan 25 proyek energi bersih inovatif di seluruh kecamatan"
       ],
       "features": [
-        "Pusat sumber daya edukasi",
-        "Program inkubasi teknologi",
-        "Kursus sertifikasi profesional",
-        "Jaringan kolaborasi internasional"
+        "Pusat sumber daya edukasi untuk masyarakat Kota Karunia",
+        "Program inkubasi teknologi energi bersih",
+        "Program Green Skilling & Up Skilling untuk masyarakat lokal",
+        "Jaringan kolaborasi antar kecamatan dan desa"
       ]
     }
+  },
+  "contact": {
+    "address": "Jl. Neraca No. 1, Kota Karunia 12112",
+    "email": "GreenStrategyforCleanEnergy@gmail.com",
+    "phone": "+62 271 1234 5678"
   }
 }
