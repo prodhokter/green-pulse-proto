@@ -10,7 +10,7 @@ import seedData from '@/data/seedData.json';
 const NewsArticle = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  
+
   const article = seedData.news.find(article => article.id === parseInt(id || '0'));
 
   if (!article) {
@@ -63,8 +63,8 @@ const NewsArticle = () => {
     <div className="container mx-auto px-4 py-8">
       {/* Back Navigation */}
       <div className="mb-6">
-        <Button 
-          variant="ghost" 
+        <Button
+          variant="ghost"
           onClick={() => navigate('/news')}
           className="mb-4"
         >
@@ -112,10 +112,21 @@ const NewsArticle = () => {
 
         {/* Article Image */}
         <div className="mb-8">
-          <div className="w-full h-64 lg:h-96 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-6xl mb-4">📰</div>
-              <p className="text-muted-foreground">Gambar artikel akan ditampilkan di sini</p>
+          <div className="w-full h-64 lg:h-96 rounded-lg overflow-hidden shadow-lg">
+            <img 
+              src={article.image} 
+              alt={article.title}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+                e.currentTarget.nextElementSibling?.classList.remove('hidden');
+              }}
+            />
+            <div className="hidden w-full h-full bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-6xl mb-4">📰</div>
+                <p className="text-muted-foreground">Gambar artikel tidak dapat dimuat</p>
+              </div>
             </div>
           </div>
         </div>
@@ -165,13 +176,27 @@ const NewsArticle = () => {
             <h3 className="text-2xl font-bold text-foreground mb-6">Artikel Terkait</h3>
             <div className="grid md:grid-cols-3 gap-6">
               {relatedArticles.map((relatedArticle) => (
-                <Card key={relatedArticle.id} className="transition-smooth hover:shadow-card group cursor-pointer">
+                <Card key={relatedArticle.id} className="transition-smooth hover:shadow-card group cursor-pointer overflow-hidden">
                   <Link to={`/news/${relatedArticle.id}`}>
-                    <CardHeader>
-                      <div className="flex items-center justify-between mb-2">
-                        <Badge variant="outline" className="text-xs">
+                    {/* Related Article Image */}
+                    <div className="relative h-32 overflow-hidden">
+                      <img 
+                        src={relatedArticle.image} 
+                        alt={relatedArticle.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        onError={(e) => {
+                          e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMzUgMTIwSDI2NVYxODBIMTM1VjEyMFoiIGZpbGw9IiNEMUQ1REIiLz4KPGV4dCB4PSIyMDAiIHk9IjE2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZCNzI4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0Ij5HYW1iYXIgQmVyaXRhPC90ZXh0Pgo8L3N2Zz4K';
+                        }}
+                      />
+                      <div className="absolute top-2 left-2">
+                        <Badge variant="default" className="text-xs shadow-sm">
                           {relatedArticle.category}
                         </Badge>
+                      </div>
+                    </div>
+                    
+                    <CardHeader>
+                      <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center space-x-1 text-xs text-muted-foreground">
                           <Calendar className="h-3 w-3" />
                           <span>{new Date(relatedArticle.date).toLocaleDateString('id-ID')}</span>

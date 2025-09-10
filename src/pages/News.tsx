@@ -8,11 +8,11 @@ import seedData from '@/data/seedData.json';
 
 const News = () => {
   const [selectedCategory, setSelectedCategory] = useState('Semua');
-  
+
   const categories = ['Semua', 'PerDa Transisi Energi', 'Update Proyek', 'Inovasi', 'Program Pelatihan'];
-  
-  const filteredNews = selectedCategory === 'Semua' 
-    ? seedData.news 
+
+  const filteredNews = selectedCategory === 'Semua'
+    ? seedData.news
     : seedData.news.filter(article => article.category === selectedCategory);
 
   return (
@@ -49,12 +49,26 @@ const News = () => {
       {/* News Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredNews.map((article) => (
-          <Card key={article.id} className="transition-smooth hover:shadow-card group cursor-pointer h-full flex flex-col">
-            <CardHeader className="flex-grow">
-              <div className="flex items-center justify-between mb-3">
-                <Badge variant="outline">
+          <Card key={article.id} className="transition-smooth hover:shadow-card group cursor-pointer h-full flex flex-col overflow-hidden">
+            {/* Article Image */}
+            <div className="relative h-48 overflow-hidden">
+              <img 
+                src={article.image} 
+                alt={article.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMzUgMTIwSDI2NVYxODBIMTM1VjEyMFoiIGZpbGw9IiNEMUQ1REIiLz4KPGV4dCB4PSIyMDAiIHk9IjE2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZCNzI4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0Ij5HYW1iYXIgQmVyaXRhPC90ZXh0Pgo8L3N2Zz4K';
+                }}
+              />
+              <div className="absolute top-3 left-3">
+                <Badge variant="default" className="shadow-sm">
                   {article.category}
                 </Badge>
+              </div>
+            </div>
+            
+            <CardHeader className="flex-grow">
+              <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center space-x-1 text-xs text-muted-foreground">
                   <Calendar className="h-3 w-3" />
                   <span>{new Date(article.date).toLocaleDateString('id-ID')}</span>
