@@ -30,12 +30,12 @@
       { "time": "23:00", "value": 920 }
     ],
     "powerSources": [
-      { "name": "Batubara", "value": 58.2, "color": "#64748b" },
-      { "name": "Gas Alam", "value": 22.1, "color": "#3b82f6" },
-      { "name": "Hidro Listrik", "value": 8.7, "color": "#06b6d4" },
-      { "name": "Tenaga Surya", "value": 6.3, "color": "#eab308" },
-      { "name": "Tenaga Angin", "value": 3.2, "color": "#22c55e" },
-      { "name": "Lainnya", "value": 1.5, "color": "#a855f7" }
+      { "name": "Batubara", "value": 6, "color": "#64748b" },
+      { "name": "Minyak Bumi", "value": 4, "color": "#3b82f6" },
+      { "name": "Tenaga Air", "value": 30, "color": "#06b6d4" },
+      { "name": "Tenaga Surya", "value": 30, "color": "#eab308" },
+      { "name": "Tenaga Angin", "value": 20, "color": "#22c55e" },
+      { "name": "Lainnya", "value": 10, "color": "#a855f7" }
     ],
     "regionalData": [
       { "region": "Kecamatan Karunia Utara", "emissions": 145000, "population": 45000 },
