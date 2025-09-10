@@ -52,8 +52,8 @@ const News = () => {
           <Card key={article.id} className="transition-smooth hover:shadow-card group cursor-pointer h-full flex flex-col overflow-hidden">
             {/* Article Image */}
             <div className="relative h-48 overflow-hidden">
-              <img 
-                src={article.image} 
+              <img
+                src={article.image}
                 alt={article.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 onError={(e) => {
@@ -66,7 +66,7 @@ const News = () => {
                 </Badge>
               </div>
             </div>
-            
+
             <CardHeader className="flex-grow">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center space-x-1 text-xs text-muted-foreground">

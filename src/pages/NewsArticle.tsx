@@ -113,8 +113,8 @@ const NewsArticle = () => {
         {/* Article Image */}
         <div className="mb-8">
           <div className="w-full h-64 lg:h-96 rounded-lg overflow-hidden shadow-lg">
-            <img 
-              src={article.image} 
+            <img
+              src={article.image}
               alt={article.title}
               className="w-full h-full object-cover"
               onError={(e) => {
@@ -180,8 +180,8 @@ const NewsArticle = () => {
                   <Link to={`/news/${relatedArticle.id}`}>
                     {/* Related Article Image */}
                     <div className="relative h-32 overflow-hidden">
-                      <img 
-                        src={relatedArticle.image} 
+                      <img
+                        src={relatedArticle.image}
                         alt={relatedArticle.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         onError={(e) => {
@@ -194,7 +194,7 @@ const NewsArticle = () => {
                         </Badge>
                       </div>
                     </div>
-                    
+
                     <CardHeader>
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center space-x-1 text-xs text-muted-foreground">
